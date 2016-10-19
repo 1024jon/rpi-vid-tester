@@ -15,16 +15,15 @@ class MyApp(App):
     def build(self):
         layout = GridLayout(cols=1, spacing=10, size_hint_y=None)
         layout.bind(minimum_height=layout.setter('height'))
+        root = ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
                    
         with open("/home/pi/edid.txt") as f:
             contents = f.read()
             main_label = Label(text=contents)
-            layout.add_widget(main_label)
+            root.add_widget(main_label)
             
-        root = ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
             
 
-        root.add_widget(layout)
             
         return root
         
