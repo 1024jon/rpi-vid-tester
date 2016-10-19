@@ -12,7 +12,7 @@ from kivy.app import runTouchApp
 layout = GridLayout(cols=1, spacing=10, size_hint_y=None)
 # Make sure the height is such that there is something to scroll.
 layout.bind(minimum_height=layout.setter('height'))
-with open("/home/pi/rpi-vid-tester/edid.txt") as f:
+with open("/home/pi/edid.txt") as f:
     contents = f.read()
     layout.add_widget(Label(text=contents))
 
