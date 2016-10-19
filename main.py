@@ -11,12 +11,12 @@ from kivy.uix.slider import Slider
 from kivy.clock import Clock
 from kivy.graphics import Color, Rectangle
 
+def crosshatch():
+    subprocess.Popen('/home/pi/rpi-vid-tester/crosshatchvid.sh')
 
 
 class MyApp(App):
     
-    def crosshatch():
-        subprocess.Popen('/home/pi/rpi-vid-tester/crosshatchvid.sh')
 
     def build(self):
         # Set up the layout:
