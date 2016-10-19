@@ -81,9 +81,9 @@ class MyApp(App):
         btn4 = Button(text="Avsync")
         btn4.bind(on_press=avsync)      
         btn5 = Button(text="ColorBars601")
-        btn5.bind(on_press=ColorBars601)
+        btn5.bind(on_press=colorbars601)
         btn6 = Button(text="ColorBars709")
-        btn6.bind(on_press=ColorBars709)        
+        btn6.bind(on_press=colorbars709)        
         
         
         btn7 = Button(text="1080p60")        
