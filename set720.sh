@@ -1,3 +1,4 @@
 #!/bin/bash
 
-tvservice -e "CEA 4"
+tvservice -d /home/pi/edid.dat
+edidparser edid.dat > edid.txt

@@ -21,7 +21,9 @@ def avsync(instance):
 def set1080(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/set1080.sh')    
 def set720(instance):
-    subprocess.Popen('/home/pi/rpi-vid-tester/set720.sh')    
+    subprocess.Popen('/home/pi/rpi-vid-tester/set720.sh')  
+def readedid(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/readedid.sh')  
 
 
 class MyApp(App):
@@ -46,7 +48,9 @@ class MyApp(App):
         btn3.bind(on_press=set1080)
         btn4 = Button(text="720p")
         btn4.bind(on_press=set720)
-        btn5 = Button(text="Input")
+        btn5 = Button(text="Other")
+        btn7 = Button(text="Read EDID")
+        btn7.bind(on_press=readedid)
         
         layout.add_widget(Label(text="Select Test Video --->"))
         layout.add_widget(btn1)
@@ -56,6 +60,7 @@ class MyApp(App):
         layout.add_widget(btn3)
         layout.add_widget(btn4)
         layout.add_widget(btn5)
+        layout.add_widget(btn7)
 
 
 
