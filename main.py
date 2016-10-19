@@ -1,5 +1,5 @@
 import kivy
-kivy.require('1.0.6') # replace with your current kivy version !
+kivy.require('1.9.2') # replace with your current kivy version !
 
 from kivy.app import App
 from kivy.uix.button import Button
@@ -23,29 +23,11 @@ class MyApp(App):
             self.rect = Rectangle(size=(800,600), pos=layout.pos)
 
         # Instantiate the first UI object (the GPIO input indicator):
-        inputDisplay = InputButton(text="Input")
+        btn1 = Button(text="Input")
+        
+        layout.add_widget(btn1)
 
-        # Schedule the update of the state of the GPIO input button:
-        Clock.schedule_interval(inputDisplay.update, 1.0/10.0)
 
-        # Create the rest of the UI objects (and bind them to callbacks, if necessary):
-        outputControl = ToggleButton(text="LED")
-        outputControl.bind(on_press=press_callback)
-        beepButton = Button(text="BEEP!")
-        beepButton.bind(on_press=press_callback)
-        wimg = Image(source='logo.png')
-        speedSlider = Slider(orientation='vertical', min=1, max=30, value=speed)
-        speedSlider.bind(on_touch_down=update_speed, on_touch_move=update_speed)
-
-        # Add the UI elements to the layout:
-        layout.add_widget(wimg)
-        layout.add_widget(inputDisplay)
-        layout.add_widget(outputControl)
-        layout.add_widget(beepButton)
-        layout.add_widget(speedSlider)
-
-        # Start flashing the LED
-        Clock.schedule_once(flash, 1.0/speed)
 
         return layout
 
