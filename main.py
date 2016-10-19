@@ -151,6 +151,7 @@ class MyApp(App):
 
         layout.add_widget(Label(text="Other --->", font_size="12sp"))
         layout.add_widget(btn19)
+        layout.add_widget(btn20)
 
 
         return layout
