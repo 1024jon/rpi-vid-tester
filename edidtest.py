@@ -8,6 +8,8 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, Rectangle
 from kivy.uix.scrollview import ScrollView
+from kivy.core.window import Window
+
 
 class MyApp(App):
     def build(self):
