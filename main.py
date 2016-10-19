@@ -14,7 +14,11 @@ from kivy.graphics import Color, Rectangle
 def crosshatch(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/crosshatchvid.sh')
 def overscan(instance):
-    subprocess.Popen('/home/pi/rpi-vid-tester/overscanvid.sh')    
+    subprocess.Popen('/home/pi/rpi-vid-tester/overscanvid.sh')  
+def set1080(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/set1080.sh')    
+def set720(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/set720.sh')    
 
 
 class MyApp(App):
@@ -30,12 +34,14 @@ class MyApp(App):
             self.rect = Rectangle(size=(800,600), pos=layout.pos)
 
         # Instantiate the first UI object (the GPIO input indicator):
-        btn1 = Button(text="Input")
+        btn1 = Button(text="CrossHatch")
         btn1.bind(on_press=crosshatch)
-        btn2 = Button(text="Input")
+        btn2 = Button(text="Overscan")
         btn2.bind(on_press=overscan)
-        btn3 = Button(text="Input")
-        btn4 = Button(text="Input")
+        btn3 = Button(text="1080p")
+        btn3.bind(on_press=set1080)
+        btn4 = Button(text="720p")
+        btn4.bind(on_press=set720)
         btn5 = Button(text="Input")
         
         layout.add_widget(btn1)
