@@ -6,20 +6,27 @@ from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, Rectangle
+from kivy.uix.scrollview import ScrollView
 
 class MyApp(App):
     def build(self):
         layout = AnchorLayout(anchor_x='center', anchor_y='bottom')
+        layout.bind(minimum_height=layout.setter('height'))
         with layout.canvas.before:
             Color(.2,.2,.2,1)
             self.rect = Rectangle(size=(800,600), pos=layout.pos)        
+            
         with open("/home/pi/edid.txt") as f:
             contents = f.read()
             main_label = Label(text=contents, font_size='8sp')
-            
             layout.add_widget(main_label)
             
-            return layout
+        root = ScrollView(size_hint=(None, None), size=(800, 600), pos_hint={'center_x':.5, 'center_y':.5})
+            
+
+        root.add_widget(layout)
+            
+        return root
         
 if __name__ == '__main__':
     MyApp().run()
