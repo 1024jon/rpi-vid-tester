@@ -57,7 +57,7 @@ def readedid(instance):
         popup = Popup(title=contents,
                       content=Label(text='EDID', font_size='8sp'),
                       size_hint=(None, None), size=(400, 600))    
-    
+    popup.open()
 
 
 class MyApp(App):
