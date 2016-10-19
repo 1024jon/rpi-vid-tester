@@ -17,5 +17,4 @@ for i in range(100):
 root = ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
 root.add_widget(layout)
         
-if __name__ == '__main__':
-    MyApp().run()
+runTouchApp(root)
