@@ -54,7 +54,7 @@ def readedid1(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/readedid1.sh') 
     with open("/home/pi/edid1.txt") as f:
         contents = f.read()    
-        popup = Popup(title='EDID', content=Label(text=contents, font_size='8sp',halign='center'), size_hint=(None, None), size=(400, 600))    
+        popup = Popup(title='EDID', content=Label(text=contents, font_size='12sp',halign='center'), size_hint=(None, None), size=(400, 600))    
     popup.open()
 
 
