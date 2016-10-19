@@ -50,10 +50,10 @@ def set1440(instance):
 def set1400(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/set1400.sh')  
     
-def readedid(instance):
-    subprocess.Popen('/home/pi/rpi-vid-tester/readedid.sh') 
-    with open("/home/pi/edid.txt") as f:
-        contents = [next(f) for x in xrange(20)] 
+def readedid1(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/readedid1.sh') 
+    with open("/home/pi/edid1.txt") as f:
+        contents = f.read()    
         popup = Popup(title='EDID', content=Label(text=contents, font_size='8sp',halign='center'), size_hint=(None, None), size=(400, 600))    
     popup.open()
 
@@ -112,8 +112,8 @@ class MyApp(App):
 
         
         
-        btn19 = Button(text="Read EDID")
-        btn19.bind(on_press=readedid)
+        btn19 = Button(text="Read EDID 1")
+        btn19.bind(on_press=readedid1)
         
         layout.add_widget(Label(text="Test Videos ->", font_size="12sp"))
         layout.add_widget(btn1)
