@@ -1,4 +1,5 @@
 import kivy
+import subprocess
 kivy.require('1.9.2') # replace with your current kivy version !
 
 from kivy.app import App
@@ -9,6 +10,7 @@ from kivy.uix.image import Image
 from kivy.uix.slider import Slider
 from kivy.clock import Clock
 from kivy.graphics import Color, Rectangle
+
 
 
 class MyApp(App):
@@ -24,6 +26,7 @@ class MyApp(App):
 
         # Instantiate the first UI object (the GPIO input indicator):
         btn1 = Button(text="Input")
+        btn1.bind(subprocess.Popen('/home/pi/rpi-vid-tester/crosshatchvid.sh'))
         btn2 = Button(text="Input")
         btn3 = Button(text="Input")
         btn4 = Button(text="Input")
