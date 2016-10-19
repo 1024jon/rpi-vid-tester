@@ -56,6 +56,13 @@ def readedid1(instance):
         contents = f.read()    
         popup = Popup(title='EDID', content=Label(text=contents, font_size='12sp',halign='center'), size_hint=(None, None), size=(400, 600))    
     popup.open()
+    
+def readedid2(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/readedid2.sh') 
+    with open("/home/pi/edid2.txt") as f:
+        contents = f.read()    
+        popup = Popup(title='EDID', content=Label(text=contents, font_size='12sp',halign='center'), size_hint=(None, None), size=(400, 600))    
+    popup.open()
 
 
 class MyApp(App):
@@ -114,6 +121,9 @@ class MyApp(App):
         
         btn19 = Button(text="Read EDID 1")
         btn19.bind(on_press=readedid1)
+        
+        btn20 = Button(text="Read EDID 2")
+        btn20.bind(on_press=readedid2)
         
         layout.add_widget(Label(text="Test Videos ->", font_size="12sp"))
         layout.add_widget(btn1)
