@@ -16,6 +16,8 @@ def crosshatch(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/crosshatchvid.sh')
 def overscan(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/overscanvid.sh')  
+def avsync(instance):
+    subprocess.Popen('/home/pi/rpi-vid-tester/avsyncvid.sh')    
 def set1080(instance):
     subprocess.Popen('/home/pi/rpi-vid-tester/set1080.sh')    
 def set720(instance):
@@ -38,15 +40,19 @@ class MyApp(App):
         btn1.bind(on_press=crosshatch)
         btn2 = Button(text="Overscan")
         btn2.bind(on_press=overscan)
+        btn6 = Button(text="Avsync")
+        btn6.bind(on_press=avsync)        
         btn3 = Button(text="1080p")
         btn3.bind(on_press=set1080)
         btn4 = Button(text="720p")
         btn4.bind(on_press=set720)
         btn5 = Button(text="Input")
         
-        layout.add_widget(Label(text="Test Video"))
+        layout.add_widget(Label(text="Select Test Video --->"))
         layout.add_widget(btn1)
         layout.add_widget(btn2)
+        layout.add_widget(btn6)
+        layout.add_widget(Label(text="Select Resolution --->"))
         layout.add_widget(btn3)
         layout.add_widget(btn4)
         layout.add_widget(btn5)
