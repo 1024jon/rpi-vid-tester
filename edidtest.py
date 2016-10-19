@@ -19,7 +19,7 @@ class MyApp(App):
             main_label = Label(text=contents)
             layout.add_widget(main_label)
             
-        root = ScrollView(size_hint=(None, None), size=(800, 600), pos_hint={'center_x':.5, 'center_y':.5})
+        root = ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
             
 
         root.add_widget(layout)
