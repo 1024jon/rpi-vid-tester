@@ -117,7 +117,7 @@ class MyApp(App):
         btn19 = Button(text="Read EDID")
         btn19.bind(on_press=readedid)
         
-        layout.add_widget(Label(text="Test Videos ->"))
+        layout.add_widget(Label(text="Test Videos ->", font_size="12sp"))
         layout.add_widget(btn1)
         layout.add_widget(btn2)
         layout.add_widget(btn3)
@@ -125,7 +125,7 @@ class MyApp(App):
         layout.add_widget(btn5)
         layout.add_widget(btn6)
 
-        layout.add_widget(Label(text="Primary Resolutions ->"))
+        layout.add_widget(Label(text="Primary Resolutions ->", font_size="12sp"))
         layout.add_widget(btn7)
         layout.add_widget(btn8)
         layout.add_widget(btn9)
@@ -133,7 +133,7 @@ class MyApp(App):
         layout.add_widget(btn11)
         layout.add_widget(btn12)
         
-        layout.add_widget(Label(text="Odd Resolutions ->"))
+        layout.add_widget(Label(text="Odd Resolutions ->", font_size="12sp"))
         layout.add_widget(btn13)
         layout.add_widget(btn14)
         layout.add_widget(btn15)
@@ -141,7 +141,7 @@ class MyApp(App):
         layout.add_widget(btn17)
         layout.add_widget(btn18)
 
-        layout.add_widget(Label(text="Other --->"))
+        layout.add_widget(Label(text="Other --->", font_size="12sp"))
         layout.add_widget(btn19)
 
 
