@@ -17,7 +17,7 @@ class MyApp(App):
             
         with open("/home/pi/edid.txt") as f:
             contents = f.read()
-            main_label = Label(text=contents, text_size=(600, 400))
+            main_label = Label(text=contents, font_size='8sp')
             
             layout.add_widget(main_label)
             
