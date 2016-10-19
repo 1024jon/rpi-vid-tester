@@ -10,6 +10,9 @@ from kivy.uix.label import Label
 class MyApp(App):
     def build(self):
         layout = AnchorLayout(anchor_x='left', anchor_y='bottom')
+        with layout.canvas.before:
+            Color(.2,.2,.2,1)
+            self.rect = Rectangle(size=(800,600), pos=layout.pos)        
         with open("/home/pi/edid.txt") as f:
             contents = f.read()
             main_label = Label(text=contents)
