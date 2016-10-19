@@ -15,7 +15,7 @@ class MyApp(App):
 
     def build(self):
         # Set up the layout:
-        layout = GridLayout(cols=5, spacing=30, padding=30, row_default_height=150)
+        layout = GridLayout(cols=5, spacing=30, padding=30, row_default_height=30)
 
         # Make the background gray:
         with layout.canvas.before:
@@ -24,8 +24,16 @@ class MyApp(App):
 
         # Instantiate the first UI object (the GPIO input indicator):
         btn1 = Button(text="Input")
+        btn2 = Button(text="Input")
+        btn3 = Button(text="Input")
+        btn4 = Button(text="Input")
+        btn5 = Button(text="Input")
         
         layout.add_widget(btn1)
+        layout.add_widget(btn2)
+        layout.add_widget(btn3)
+        layout.add_widget(btn4)
+        layout.add_widget(btn5)
 
 
 
