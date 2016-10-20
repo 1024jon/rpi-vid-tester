@@ -126,13 +126,13 @@ class MyApp(App):
 
         
         
-        btn19 = Button(text="Read EDID p1")
+        btn19 = Button(text="Read EDID p1", background_color=0,0,.5,1), background_normal='')
         btn19.bind(on_press=readedid1)
         
-        btn21 = Button(text="Read EDID p2")
+        btn21 = Button(text="Read EDID p2", background_color=(0,0,.5,1), background_normal='')
         btn21.bind(on_press=readedid3)        
         
-        btn20 = Button(text="Read EDID p3")
+        btn20 = Button(text="Read EDID p3", background_color=(0,0,.5,1), background_normal='')
         btn20.bind(on_press=readedid2)
         
         layout.add_widget(Label(text="Test Videos ->", font_size="12sp"))
