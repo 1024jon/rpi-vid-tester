@@ -84,7 +84,7 @@ class MyApp(App):
             Color(.2,.2,.2,1)
             self.rect = Rectangle(size=(800,600), pos=layout.pos)
 
-        btn1 = Button(text="General", background_color=(1,0,0,1), background_normal='')
+        btn1 = Button(text="General", background_color=(.5,0,0,1), background_normal='')
         btn1.bind(on_press=general)                
         btn2 = Button(text="Crosshatch")
         btn2.bind(on_press=crosshatch)
