@@ -23,3 +23,9 @@ Setup:
 	mtdev_%(name)s = probesysfs,provider=mtdev
 	hid_%(name)s = probesysfs,provider=hidinput
 
+Usage:
+-----
+-Clone
+-Run python main.py
+-Select output video from top, select output resolution from middle
+-Press Read EDID buttons if you wish to read EDID
