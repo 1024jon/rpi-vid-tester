@@ -25,7 +25,7 @@ Setup:
 
 Usage:
 -----
--Clone
--Run python main.py
--Select output video from top, select output resolution from middle
--Press Read EDID buttons if you wish to read EDID
+* Clone
+* Run python main.py
+* Select output video from top, select output resolution from middle
+* Press Read EDID buttons if you wish to read EDID
