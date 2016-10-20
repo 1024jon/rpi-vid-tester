@@ -86,15 +86,15 @@ class MyApp(App):
 
         btn1 = Button(text="General", background_color=(.5,0,0,1), background_normal='')
         btn1.bind(on_press=general)                
-        btn2 = Button(text="Crosshatch")
+        btn2 = Button(text="Crosshatch", background_color=(.5,0,0,1), background_normal='')
         btn2.bind(on_press=crosshatch)
-        btn3 = Button(text="Overscan")
+        btn3 = Button(text="Overscan", background_color=(.5,0,0,1), background_normal='')
         btn3.bind(on_press=overscan)
-        btn4 = Button(text="Avsync")
+        btn4 = Button(text="Avsync", background_color=(.5,0,0,1), background_normal='')
         btn4.bind(on_press=avsync)      
-        btn5 = Button(text="ColorBars601")
+        btn5 = Button(text="ColorBars601", background_color=(.5,0,0,1), background_normal='')
         btn5.bind(on_press=colorbars601)
-        btn6 = Button(text="ColorBars709")
+        btn6 = Button(text="ColorBars709", background_color=(.5,0,0,1), background_normal='')
         btn6.bind(on_press=colorbars709)        
         
         
